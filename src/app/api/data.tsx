@@ -9,7 +9,7 @@ export async function urlDownloadHandler(url: string) {
   // Validate and potentially encode URL
 
   // Assuming URL encoding is needed
-  const executablePath = await edgeChromium.executablePath;
+  const executablePath = await edgeChromium.executablePath("https://github.com/Sparticuz/chromium/releases/download/v110.0.1/chromium-v110.0.1-pack.tar");
   try {
     const browser = await puppeteer.launch({
       executablePath,
