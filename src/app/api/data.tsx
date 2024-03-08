@@ -1,16 +1,20 @@
 "use server";
 
 import { scrapeInfiniteScrollItems } from "../../utils/scrape";
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
+import edgeChromium from "chrome-aws-lambda";
 // import { Parser } from "json2csv";
 
 export async function urlDownloadHandler(url: string) {
   // Validate and potentially encode URL
 
   // Assuming URL encoding is needed
-
+  const executablePath = await edgeChromium.executablePath;
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      executablePath,
+      args: edgeChromium.args,
+    });
 
     const page = await browser.newPage();
 
