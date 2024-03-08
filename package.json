@@ -1,0 +1,30 @@
+{
+  "name": "webscraping-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "json2csv": "^6.0.0-alpha.2",
+    "next": "14.1.2",
+    "playwright": "^1.42.1",
+    "puppeteer": "^22.4.0",
+    "react": "^18",
+    "react-csv": "^2.2.2",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/json2csv": "^5.0.7",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-csv": "^1.1.10",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.2",
+    "typescript": "^5"
+  }
+}
