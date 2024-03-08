@@ -10,7 +10,11 @@ export async function urlDownloadHandler(url: string) {
   // Assuming URL encoding is needed
 
   try {
+<<<<<<< HEAD
     const browser = await puppeteer.launch({ headless: "new" });
+=======
+    const browser = await puppeteer.launch({ headless: false });
+>>>>>>> e0567e7a779ac18fb19a26590b6df1d99ba5542d
     const page = await browser.newPage();
 
     console.log("Navigating to:", url); // Log the URL for debugging
